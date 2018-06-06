@@ -435,13 +435,13 @@ class OutlookCalendar
     {
         $startTime->setTimeZone(new \DateTimeZone("UTC"));
         $endTime->setTimeZone(new \DateTimeZone("UTC"));
-        if ($allDay) {
-            $startTime = clone $startTime;
-            $endTime->setTime(0, 0, 0);
-
-            $endTime = clone $startTime;
-            $endTime->modify('+1 day');
-        }
+//        if ($allDay) {
+//            $startTime = clone $startTime;
+//            $endTime->setTime(0, 0, 0);
+//
+//            $endTime = clone $startTime;
+//            $endTime->modify('+1 day');
+//        }
 
         $tz = $startTime->getTimezone();
         // Generate the JSON payload
